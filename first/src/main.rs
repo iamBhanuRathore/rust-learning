@@ -234,8 +234,118 @@
 // }
 // --------------------
 
-use std::collections::HashMap;
+// fn main() {
+//     let v1 = vec![1, 2, 3, 4, 5];
+//     let v1_iter = v1.iter();
+//     let even_iter = v1_iter.filter(|x| *x % 2 == 0);
+//     // let total: i32 = v1_iter.sum();
+//     // for val in v1_iter {
+//     //     println!("{}", val)
+//     // }
+//     for val in even_iter {
+//         println!("{}", val)
+//     }
+//     // println!("{}", v1.len())
+// }
+// ---------------------------------
 
-fn main(){
-    let hash_map = HashMap
+// fn main() {
+//     let vec = vec![1, 2, 3, 4, 5, 6, 7, 8];
+//     let vec_iter = vec.iter();
+//     let double_vec = vec_iter.filter(|x| *x % 2 == 1).map(|x| x * 2);
+//     // let mut result: Vec<i32> = Vec::new();
+//     // for val in double_vec {
+//     //     // println!("{}", val)
+//     //     result.push(val);
+//     // }
+//     let result: Vec<i32> = double_vec.collect();
+//     println!("{:?}", result)
+// }
+// ---------------------------------
+
+// trait Summary {
+//     fn summarize(&self) -> String {
+//         return format!("Summarize");
+//     };
+//     // fn other(&self)->String
+// }
+
+// struct User {
+//     name: String,
+//     age: u16,
+// }
+
+// impl Summary for User {
+//     fn summarize(&self) -> String {
+//         return format!("User Name is {} and age is {}", self.name, self.age);
+//     }
+// }
+
+// fn main() {
+//     let user = User {
+//         name: String::from("Bhanu"),
+//         age: 24,
+//     };
+//     println!("{}", user.summarize())
+// }
+// ---------------------------------
+
+// fn longest<'a>(first: &'a str, second: &'a str) -> &'a str {
+//     let str1: usize = first.len();
+//     let str2: usize = second.len();
+//     if str1 > str2 {
+//         return first;
+//     } else {
+//         return second;
+//     }
+// }
+
+// fn main() {
+//     let result: &str;
+//     let a = String::from("Bhanu");
+//     {
+//         let b = String::from("Rathore");
+//         result = longest(&a, &b);
+//         println!("result 1 {}", result);
+//     }
+//     // println!("result 2 {}", result);
+// }
+// ---------------------------------
+// struct User<'a> {
+//     name: &'a str,
+//     age: u16,
+// }
+// fn main() {
+//     let user_name: &str;
+//     let user_age: u16;
+//     {
+//         let string = String::from("Bhanu");
+//         let user = User {
+//             name: &string,
+//             age: 24,
+//         };
+//         user_name = user.name;
+//         user_age = user.age;
+//         println!("User name inside, {}", user_name);
+//     }
+//     // println!("User name, {}", user_name)
+//     println!("User age, {}", user_age)
+// }
+// ---------------------------------``
+
+// use std::thread;
+// fn main() {
+//     let vector = vec![1, 2, 3, 4];
+//     let handle = thread::spawn(move || {
+//         // let vector = vec![1, 2, 3, 4];
+//         println!("{:?}", vector);
+//     });
+//     // handle.join();
+//}
+
+fn main() {
+    let vector = vec![1, 2, 3, 4, 5];
+    for value in vector {
+        println!("{}", value);
+    }
 }
